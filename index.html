@@ -242,34 +242,22 @@
       background: linear-gradient(180deg, rgba(52, 211, 153, 0.015) 0%, transparent 100%);
       border-top: 1px solid var(--border);
     }
-    .ref-tabs {
-      display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 2.5rem;
-    }
-    .ref-tab-btn {
-      padding: 0.875rem 1.5rem; background: none; border: none; border-bottom: 2px solid transparent;
-      color: var(--muted-foreground); font-family: var(--font-sans); font-size: 0.875rem;
-      font-weight: 500; cursor: pointer; transition: all 0.2s; white-space: nowrap;
-    }
-    .ref-tab-btn:hover { color: var(--foreground); }
-    .ref-tab-btn.active { color: var(--primary); border-bottom-color: var(--primary); }
-    .ref-panel { display: none; }
-    .ref-panel.active { display: block; }
-    .ref-panel h3 {
+    #ref-embroidery h3 {
       font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em;
       margin: 2.5rem 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
     }
-    .ref-panel h3:first-child { margin-top: 0; }
-    .ref-panel h4 {
+    #ref-embroidery h3:first-child { margin-top: 0; }
+    #ref-embroidery h4 {
       font-size: 1rem; font-weight: 600; margin: 1.75rem 0 0.5rem; color: var(--secondary);
     }
-    .ref-panel p, .ref-panel li {
+    #ref-embroidery p, #ref-embroidery li {
       font-size: 0.8125rem; color: var(--muted-foreground); line-height: 1.7;
     }
-    .ref-panel ul, .ref-panel ol { padding-left: 1.25rem; margin-bottom: 1rem; }
-    .ref-panel li { margin-bottom: 0.375rem; }
-    .ref-panel strong { color: var(--foreground); font-weight: 600; }
-    .ref-panel a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
-    .ref-panel a:hover { color: var(--secondary); text-decoration: underline; }
+    #ref-embroidery ul, #ref-embroidery ol { padding-left: 1.25rem; margin-bottom: 1rem; }
+    #ref-embroidery li { margin-bottom: 0.375rem; }
+    #ref-embroidery strong { color: var(--foreground); font-weight: 600; }
+    #ref-embroidery a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
+    #ref-embroidery a:hover { color: var(--secondary); text-decoration: underline; }
     .ref-table {
       width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem;
       font-size: 0.8125rem;
@@ -325,8 +313,6 @@
     }
     .ref-compare-card ul { text-align: left; }
     @media (max-width: 768px) {
-      .ref-tabs { overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
-      .ref-tabs::-webkit-scrollbar { display: none; }
       .ref-compare-grid { grid-template-columns: 1fr; }
     }
 
@@ -877,235 +863,10 @@
     <div class="section" style="padding-bottom: 5rem;">
       <div class="section-header">
         <h2>Reference</h2>
-        <p>Product sourcing research and embroidery guide for the team.</p>
+        <p>Embroidery pricing, Austin shops, and next steps for the team.</p>
       </div>
 
-      <div class="ref-tabs">
-        <button class="ref-tab-btn active" onclick="switchRefTab('sourcing')">Product Sourcing</button>
-        <button class="ref-tab-btn" onclick="switchRefTab('embroidery')">Embroidery Guide</button>
-      </div>
-
-      <!-- ── TAB 1: SOURCING ── -->
-      <div id="ref-sourcing" class="ref-panel active">
-
-        <h3>Quarter Zips</h3>
-
-        <h4>1. Peter Millar Perth Performance Quarter-Zip — $140</h4>
-        <ul>
-          <li><strong>Material:</strong> 89% Microfiber Polyester / 11% Spandex</li>
-          <li><strong>Colors:</strong> Black, Iron (dark charcoal), Navy, Nordic Pine (forest green)</li>
-          <li><strong>Why it works:</strong> The Perth is <em>the</em> gold-standard corporate quarter-zip. Four-way stretch, moisture-wicking, easy-care. Extremely clean silhouette with no visible branding. Already a staple in VC and startup circles.</li>
-          <li><a href="https://www.petermillar.com/p/perth-performance-quarter-zip/me0ek40.html" target="_blank" rel="noopener">Peter Millar</a> · <a href="https://www.nordstrom.com/s/peter-millar-perth-performance-quarter-zip-sweatshirt/5259662" target="_blank" rel="noopener">Nordstrom</a></li>
-        </ul>
-
-        <h4>2. Arc'teryx Delta 1/2 Zip Neck — $180</h4>
-        <ul>
-          <li><strong>Material:</strong> Polartec fleece, recycled polyester blend</li>
-          <li><strong>Colors:</strong> Black</li>
-          <li><strong>Why it works:</strong> Arc'teryx carries enormous brand equity in tech/startup. Lightweight fleece half-zip with minimal design, clean lines. The fleece communicates "we build things" rather than "we play golf." Excellent embroidery-ready chest panel.</li>
-          <li><a href="https://arcteryx.com/us/en/shop/mens/delta-1-2-zip-neck-0550" target="_blank" rel="noopener">Arc'teryx</a> · <a href="https://www.rei.com/product/250300/arcteryx-delta-half-zip-fleece-pullover-mens" target="_blank" rel="noopener">REI</a></li>
-        </ul>
-
-        <h4>3. lululemon Metal Vent Tech Half Zip — $118</h4>
-        <ul>
-          <li><strong>Material:</strong> Seamless knit with silverescent anti-odor technology</li>
-          <li><strong>Colors:</strong> Black/Black, Deep Coal/Black</li>
-          <li><strong>Why it works:</strong> Athletic-leaning pick. Seamless construction looks modern and sleek. Most affordable in this tier. Best for teams that skew younger.</li>
-          <li><a href="https://shop.lululemon.com/p/mens-jackets-and-hoodies-hoodies/Metal-Vent-Tech-Half-Zip-3/_/prod11750188" target="_blank" rel="noopener">lululemon</a></li>
-        </ul>
-
-        <h4>4. lululemon Engineered Warmth Half Zip — $168</h4>
-        <ul>
-          <li><strong>Material:</strong> Merino wool blend (thermoregulating)</li>
-          <li><strong>Colors:</strong> Black/Black, Graphite Grey/White</li>
-          <li><strong>Why it works:</strong> Elevated, cozier alternative. Merino wool blend gives a richer, more textured hand-feel. The knit texture makes embroidered logos pop. Best for colder climates or gifting-tier.</li>
-          <li><a href="https://shop.lululemon.com/p/mens-jackets-and-hoodies-hoodies/Engineered-Warmth-Half-Zip-MD/_/prod11781642" target="_blank" rel="noopener">lululemon</a></li>
-        </ul>
-
-        <h4>5. TravisMathew The Heater Quarter Zip — $110</h4>
-        <ul>
-          <li><strong>Material:</strong> 70% Recycled Polyester / 23% Cotton / 7% Elastane</li>
-          <li><strong>Colors:</strong> Black</li>
-          <li><strong>Why it works:</strong> Sits at the intersection of golf and lifestyle. Softer, more relaxed hand-feel. Reads "weekend" more than "boardroom" — good fit for startups. Lower price point for broader team distribution.</li>
-          <li><a href="https://travismathew.com/products/the-heater-quarter-zip" target="_blank" rel="noopener">TravisMathew</a></li>
-        </ul>
-
-        <h4>6. Marine Layer Re-Spun Sport Quarter Zip — $98</h4>
-        <ul>
-          <li><strong>Material:</strong> 87% Polyester / 13% Spandex, mossed (brushed) finish</li>
-          <li><strong>Colors:</strong> Charcoal, Navy</li>
-          <li><strong>Why it works:</strong> San Francisco brand with strong startup cachet. Incredibly soft brushed interior. At $98, most affordable in this tier while carrying a premium brand name.</li>
-          <li><a href="https://www.marinelayer.com/products/sport-quarter-zip-custom-ch-bl-1" target="_blank" rel="noopener">Marine Layer (Charcoal)</a> · <a href="https://www.marinelayer.com/products/mens-sport-quarter-zip-in-navy-1" target="_blank" rel="noopener">Navy</a></li>
-        </ul>
-
-        <h3>Vests</h3>
-
-        <h4>1. Arc'teryx Atom Vest — $200</h4>
-        <ul>
-          <li><strong>Material:</strong> Body: 88% Nylon / 12% Elastane; Insulation: Coreloft Stretch 40gsm; Lining: Recycled Nylon</li>
-          <li><strong>Colors:</strong> Black (XS–XXL)</li>
-          <li><strong>Why it works:</strong> Arguably the most recognized technical vest on the market. FC0 DWR finish (PFAS-free), slim athletic silhouette. Says "we take what we build seriously."</li>
-          <li><a href="https://arcteryx.com/us/en/shop/mens/atom-vest-9559" target="_blank" rel="noopener">Arc'teryx</a> · <a href="https://www.rei.com/product/242921/arcteryx-atom-insulated-vest-mens" target="_blank" rel="noopener">REI</a></li>
-        </ul>
-
-        <h4>2. Patagonia Nano Puff Vest — $179</h4>
-        <ul>
-          <li><strong>Material:</strong> 100% Recycled Polyester; 60g PrimaLoft Gold Eco insulation</li>
-          <li><strong>Colors:</strong> Black, Forge Grey</li>
-          <li><strong>Why it works:</strong> Modern classic. Lightweight, packable, warm. 100% recycled materials align with values-driven startups. People keep these for years.</li>
-          <li><a href="https://www.patagonia.com/product/mens-nano-puff-insulated-vest/84243.html" target="_blank" rel="noopener">Patagonia</a> · <a href="https://www.rei.com/product/102405/patagonia-nano-puff-insulated-vest-mens" target="_blank" rel="noopener">REI</a></li>
-        </ul>
-
-        <h4>3. The North Face ThermoBall Eco Vest 2.0 — $180</h4>
-        <ul>
-          <li><strong>Material:</strong> 100% Recycled Nylon, non-PFC DWR; ThermoBall Eco insulation</li>
-          <li><strong>Colors:</strong> TNF Black, Meld Grey</li>
-          <li><strong>Why it works:</strong> Signature round-quilting pattern stands out from the horizontal quilting of most vests. 100% recycled materials. Slightly more casual/outdoorsy.</li>
-          <li><a href="https://www.thenorthface.com/en-us/p/mens/mens-jackets-and-vests/mens-insulated-and-down-300771/mens-thermoball-vest-20-NF0A5GLO" target="_blank" rel="noopener">The North Face</a> · <a href="https://www.rei.com/product/224092/the-north-face-thermoball-eco-20-insulated-vest-mens" target="_blank" rel="noopener">REI</a></li>
-        </ul>
-
-        <h4>4. Peter Millar Fuse Hybrid Vest — $230</h4>
-        <ul>
-          <li><strong>Material:</strong> Quilted 100% Polyester front/back; 87% Polyester / 13% Spandex stretch sides</li>
-          <li><strong>Colors:</strong> Carbon Black, Navy</li>
-          <li><strong>Why it works:</strong> Most polished vest on the list. Tailored, slim fit works over a button-down or t-shirt. The "investor meeting" vest.</li>
-          <li><a href="https://www.petermillar.com/p/fuse-hybrid-vest/mf25ez11_CRBLK.html" target="_blank" rel="noopener">Peter Millar</a> · <a href="https://www.neimanmarcus.com/p/peter-millar-mens-fuse-water-resistant-hybrid-vest-prod282920037" target="_blank" rel="noopener">Neiman Marcus</a></li>
-        </ul>
-
-        <h4>5. lululemon Insulated Utility Vest — $198</h4>
-        <ul>
-          <li><strong>Material:</strong> Polyester/Nylon/Elastane shell, synthetic insulation</li>
-          <li><strong>Colors:</strong> Black</li>
-          <li><strong>Why it works:</strong> Modern, streetwear-inflected silhouette. Clean lines, minimal branding. For teams that want something less outdoorsy, more urban.</li>
-          <li><a href="https://shop.lululemon.com/p/mens-jackets-and-outerwear/Insulated-Utility-Vest-MD/_/prod11710548" target="_blank" rel="noopener">lululemon</a></li>
-        </ul>
-
-        <h3>T-Shirts</h3>
-
-        <h4>1. Reigning Champ Heavyweight Jersey Tee — $68</h4>
-        <ul>
-          <li><strong>Material:</strong> 100% Cotton, 330 GSM, preshrunk, flatlock seams</li>
-          <li><strong>Colors:</strong> Black, Navy</li>
-          <li><strong>Why it works:</strong> <em>The</em> name in premium basics. Made in Canada. 330 GSM weight drapes beautifully. Preshrunk cotton means logo placement won't shift after washing.</li>
-          <li><a href="https://reigningchamp.com/products/heavyweight-jersey-relaxed-t-shirt-black" target="_blank" rel="noopener">Reigning Champ</a></li>
-        </ul>
-
-        <h4>2. Lady White Co. Rugby T-Shirt — $130</h4>
-        <ul>
-          <li><strong>Material:</strong> 100% Cotton, 10 oz (~340 GSM), custom-milled jersey</li>
-          <li><strong>Colors:</strong> Black</li>
-          <li><strong>Why it works:</strong> The insider's choice. Made in LA with custom-milled fabric. Boxy cut, structured drape. Luxury tier for founders, advisors, or special occasions.</li>
-          <li><a href="https://ladywhiteco.com/products/rugby-t-shirt-black" target="_blank" rel="noopener">Lady White Co.</a></li>
-        </ul>
-
-        <h4>3. lululemon Metal Vent Tech SS — $78</h4>
-        <ul>
-          <li><strong>Material:</strong> Seamless knit, silverescent anti-odor technology</li>
-          <li><strong>Colors:</strong> Black, Deep Coal/Black</li>
-          <li><strong>Why it works:</strong> Performance-oriented. Seamless construction is visually clean and modern. Great for travel, conferences, and active days.</li>
-          <li><a href="https://shop.lululemon.com/p/men-ss-tops/Metal-Vent-Tech-Short-Sleeve-Shirt-3/_/prod11710026" target="_blank" rel="noopener">lululemon</a></li>
-        </ul>
-
-        <h4>4. Cuts Clothing AO Curve-Hem Tee — $40–$54</h4>
-        <ul>
-          <li><strong>Material:</strong> 62% Polyester / 33% Cotton / 5% Spandex (PYCA Pro)</li>
-          <li><strong>Colors:</strong> Black</li>
-          <li><strong>Why it works:</strong> Cult following. Wrinkle-resistant, shape-retaining, buttery soft. Signature curved hemline. Best value pick that still feels premium.</li>
-          <li><a href="https://www.cutsclothing.com/products/black-crew-curve-hem" target="_blank" rel="noopener">Cuts Clothing</a></li>
-        </ul>
-
-        <h4>5. Buck Mason Field-Spec Cotton Heavy Tee — $55</h4>
-        <ul>
-          <li><strong>Material:</strong> 100% Cotton, 310 GSM, washed for lived-in texture</li>
-          <li><strong>Colors:</strong> Black, Dress Navy</li>
-          <li><strong>Why it works:</strong> Elevated American basics. 310 GSM — double the density of standard tees. Vintage surplus wash gives broken-in softness from day one.</li>
-          <li><a href="https://www.buckmason.com/products/black-field-spec-cotton-vintage-surplus-heavy-tee" target="_blank" rel="noopener">Buck Mason</a></li>
-        </ul>
-
-        <h3>Summary Pricing</h3>
-
-        <table class="ref-table">
-          <thead>
-            <tr><th>Category</th><th>Product</th><th>Price</th><th>Best Dark Color</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><strong>Quarter Zips</strong></td><td></td><td></td><td></td></tr>
-            <tr><td></td><td>Peter Millar Perth</td><td>$140</td><td>Iron / Black</td></tr>
-            <tr><td></td><td>Arc'teryx Delta 1/2 Zip</td><td>$180</td><td>Black</td></tr>
-            <tr><td></td><td>lululemon Metal Vent Tech HZ</td><td>$118</td><td>Black / Deep Coal</td></tr>
-            <tr><td></td><td>lululemon Engineered Warmth HZ</td><td>$168</td><td>Black</td></tr>
-            <tr><td></td><td>TravisMathew Heater QZ</td><td>$110</td><td>Black</td></tr>
-            <tr><td></td><td>Marine Layer Sport QZ</td><td>$98</td><td>Charcoal / Navy</td></tr>
-            <tr><td><strong>Vests</strong></td><td></td><td></td><td></td></tr>
-            <tr><td></td><td>Arc'teryx Atom Vest</td><td>$200</td><td>Black</td></tr>
-            <tr><td></td><td>Patagonia Nano Puff Vest</td><td>$179</td><td>Black / Forge Grey</td></tr>
-            <tr><td></td><td>North Face ThermoBall Eco 2.0</td><td>$180</td><td>TNF Black</td></tr>
-            <tr><td></td><td>Peter Millar Fuse Hybrid</td><td>$230</td><td>Carbon Black</td></tr>
-            <tr><td></td><td>lululemon Insulated Utility</td><td>$198</td><td>Black</td></tr>
-            <tr><td><strong>T-Shirts</strong></td><td></td><td></td><td></td></tr>
-            <tr><td></td><td>Reigning Champ Heavyweight</td><td>$68</td><td>Black / Navy</td></tr>
-            <tr><td></td><td>Lady White Co. Rugby Tee</td><td>$130</td><td>Black</td></tr>
-            <tr><td></td><td>lululemon Metal Vent Tech SS</td><td>$78</td><td>Black / Deep Coal</td></tr>
-            <tr><td></td><td>Cuts AO Curve-Hem Tee</td><td>$40–$54</td><td>Black</td></tr>
-            <tr><td></td><td>Buck Mason Field-Spec Heavy</td><td>$55</td><td>Black / Dress Navy</td></tr>
-            <tr><td><strong>Hats</strong></td><td></td><td></td><td></td></tr>
-            <tr><td></td><td>lululemon Structured Ball Cap</td><td>$38</td><td>Black</td></tr>
-            <tr><td></td><td>Arc'teryx Bird Word Cap</td><td>$50</td><td>24K Black</td></tr>
-            <tr><td></td><td>Nike Dri-FIT Club Structured</td><td>$25–$28</td><td>Black</td></tr>
-            <tr><td><strong>YETI</strong></td><td></td><td></td><td></td></tr>
-            <tr><td></td><td>Rambler 20 oz Tumbler</td><td>~$35</td><td>Black</td></tr>
-            <tr><td></td><td>Rambler 26 oz Bottle</td><td>~$40</td><td>Black</td></tr>
-            <tr><td></td><td>Rambler 14 oz Stackable Mug</td><td>~$30</td><td>Black</td></tr>
-          </tbody>
-        </table>
-
-        <h3>Embroidery Compatibility</h3>
-
-        <div class="ref-callout">
-          <strong>Best for embroidery</strong> (flat, smooth fabric surfaces): Peter Millar Perth, TravisMathew Heater, Marine Layer Sport, all vests (chest area), all cotton tees (Reigning Champ, Lady White Co., Buck Mason).
-        </div>
-
-        <div class="ref-callout">
-          <strong>Requires care</strong> (textured or technical fabrics): Arc'teryx Delta (use topping/backing), lululemon Metal Vent Tech (needs stabilizer), lululemon Engineered Warmth (use proper backing), Cuts Clothing (use cut-away stabilizer).
-        </div>
-
-        <div class="ref-callout">
-          <strong>YETI products:</strong> Laser engraving only (not embroidery). Permanent, dishwasher-safe, appears as silver/metallic on colored DuraCoat surfaces.
-        </div>
-
-        <h3>Recommended Starter Kit</h3>
-        <p style="margin-bottom: 1.25rem;">For a 10–15 person team:</p>
-
-        <h4>Tier 1 — Everyday / All-hands</h4>
-        <ul>
-          <li>Marine Layer Sport QZ in Charcoal ($98) or lululemon Metal Vent Tech HZ in Black ($118)</li>
-          <li>Cuts AO Curve-Hem Tee in Black ($40–$54)</li>
-          <li>YETI Rambler 14 oz Mug in Black (~$30)</li>
-          <li>Nike Dri-FIT Club Cap in Black ($28)</li>
-        </ul>
-
-        <h4>Tier 2 — Leadership / Client Gifting</h4>
-        <ul>
-          <li>Peter Millar Perth QZ in Iron ($140)</li>
-          <li>Patagonia Nano Puff Vest in Black ($179)</li>
-          <li>Reigning Champ Heavyweight Tee in Black ($68)</li>
-          <li>YETI Rambler 20 oz Tumbler in Black (~$35)</li>
-          <li>lululemon Structured Ball Cap in Black ($38)</li>
-        </ul>
-
-        <h4>Tier 3 — Founders / VIP / Board</h4>
-        <ul>
-          <li>Arc'teryx Delta 1/2 Zip in Black ($180)</li>
-          <li>Peter Millar Fuse Hybrid Vest in Carbon Black ($230)</li>
-          <li>Lady White Co. Rugby Tee in Black ($130)</li>
-          <li>YETI Rambler 26 oz Bottle in Black (~$40)</li>
-          <li>Arc'teryx Bird Word Cap in 24K Black ($50)</li>
-        </ul>
-
-      </div>
-
-      <!-- ── TAB 2: EMBROIDERY GUIDE ── -->
-      <div id="ref-embroidery" class="ref-panel">
+      <div id="ref-embroidery">
 
         <h3>Embroidery Pricing</h3>
 
@@ -1257,7 +1018,7 @@
         </table>
 
         <div class="ref-callout">
-          Garments are purchased separately at retail. Embroidery cost is in addition to the product prices listed in the Product Sourcing tab.
+          Garments are purchased separately at retail. Embroidery cost is in addition to the product prices listed above.
         </div>
 
         <h3>Action Plan</h3>
@@ -1293,13 +1054,6 @@
   </footer>
 
   <script>
-    function switchRefTab(tab) {
-      document.querySelectorAll('.ref-tab-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.ref-panel').forEach(panel => panel.classList.remove('active'));
-      document.getElementById('ref-' + tab).classList.add('active');
-      event.currentTarget.classList.add('active');
-    }
-
     function scrollToSection(id) {
       const el = document.getElementById(id);
       if (el) {
